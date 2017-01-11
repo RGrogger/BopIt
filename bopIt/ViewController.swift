@@ -15,11 +15,15 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func die ()
+    {
+        let alert = UIAlertController (title: "You Lose :(", message: nil, preferredStyle: UIAlertControllerStyle.alert)
+        let resetButton = UIAlertAction(title: "restart?", style: .default, handler:
+            {(sender) in
+            })
+        alert.addAction(resetButton)
+        present(alert, animated: true, completion: nil)
     }
-
 
 }
 

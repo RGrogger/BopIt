@@ -8,11 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController
+{
+    @IBOutlet weak var bopItImageView: UIImageView!
+    @IBOutlet weak var welcomeLabel: UILabel!
+    
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        welcomeLabel.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 2)
+
     }
 
     func die ()

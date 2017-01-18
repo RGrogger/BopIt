@@ -14,7 +14,6 @@ class ViewController: UIViewController
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var beginButton: UIButton!
     
-    var deathTimer = Timer()
     var commandArray = ["Bop It!", "Twist It!", "Pull It!"]
     
     override func viewDidLoad()
@@ -43,15 +42,7 @@ class ViewController: UIViewController
             welcomeLabel.text = commandArray[2]
         default:
             break
-        /******************************************
-             set the death timer to 0 below
-        *******************************************/
-        
-        
-        
-        /******************************************
-             set the death timer to 0 above
-        ******************************************/
+            
         }
     }
     func die ()
@@ -61,6 +52,7 @@ class ViewController: UIViewController
             {(sender) in
                 self.beginButton.isHidden = false
                 self.bopItImageView.isHidden = true
+                self.welcomeLabel.text = "Welcome to Bop-It!"
             })
         alert.addAction(resetButton)
         present(alert, animated: true, completion: nil)
@@ -68,60 +60,52 @@ class ViewController: UIViewController
     
     @IBAction func twistItSwipeUp(_ sender: UISwipeGestureRecognizer)
     {
-        switch welcomeLabel.text
+        if welcomeLabel.text == commandArray[1]
         {
-        case commandArray[0]?:
-            die()
-        case commandArray[1]?:
             newCommand()
-        case commandArray[2]?:
-            die()
-        default:
-            break
         }
+        else
+        {
+            die()
+        }
+        
     }
     @IBAction func twistItSwipeDown(_ sender: UISwipeGestureRecognizer)
     {
-        switch welcomeLabel.text
+        if welcomeLabel.text == commandArray[1]
         {
-        case commandArray[0]?:
-            die()
-        case commandArray[1]?:
             newCommand()
-        case commandArray[2]?:
-            die()
-        default:
-            break
         }
+        else
+        {
+            die()
+        }
+        
     }
     
     @IBAction func pullItSwipeRight(_ sender: UISwipeGestureRecognizer)
     {
-        switch welcomeLabel.text
+        if welcomeLabel.text == commandArray[2]
         {
-        case commandArray[0]?:
-            die()
-        case commandArray[1]?:
-            die()
-        case commandArray[2]?:
             newCommand()
-        default:
-            break
         }
+        else
+        {
+            die()
+        }
+        
     }
     @IBAction func bopItTapped(_ sender: UITapGestureRecognizer)
     {
-        switch welcomeLabel.text
+        if welcomeLabel.text == commandArray[0]
         {
-        case commandArray[0]?:
             newCommand()
-        case commandArray[1]?:
-            die()
-        case commandArray[2]?:
-            die()
-        default:
-            break
         }
+        else
+        {
+            die()
+        }
+    
     }
     
 

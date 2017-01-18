@@ -33,7 +33,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E4R-a8-CAX">
-                                <rect key="frame" x="84" y="39" width="111" height="115"/>
+                                <rect key="frame" x="100" y="48" width="95" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.11031956225633621" green="0.18286699056625366" blue="0.67018479108810425" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
@@ -43,7 +43,7 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BD9-3n-z7S">
-                                <rect key="frame" x="56" y="200" width="139" height="128"/>
+                                <rect key="frame" x="56" y="200" width="120" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.11031956225633621" green="0.18286699056625366" blue="0.67018479108810425" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
@@ -61,7 +61,7 @@
                                 </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="brC-Wi-psg">
-                                <rect key="frame" x="231" y="200" width="89" height="50"/>
+                                <rect key="frame" x="247" y="213" width="89" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="21"/>
                                 <state key="normal" title="Begin!"/>
@@ -79,10 +79,26 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="Lf4-Hu-bVd"/>
-                <swipeGestureRecognizer direction="left" id="pPc-az-Vdi"/>
-                <swipeGestureRecognizer direction="down" id="8Xg-Cd-LxR"/>
-                <tapGestureRecognizer id="Jqp-oP-4Jr"/>
+                <swipeGestureRecognizer direction="right" id="Lf4-Hu-bVd">
+                    <connections>
+                        <action selector="twistItSwipeUp:" destination="BYZ-38-t0r" id="apG-1s-LwR"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="pPc-az-Vdi">
+                    <connections>
+                        <action selector="twistItSwipeDown:" destination="BYZ-38-t0r" id="aQ2-uh-9zI"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="8Xg-Cd-LxR">
+                    <connections>
+                        <action selector="pullItSwipeRight:" destination="BYZ-38-t0r" id="UQ2-2H-9Nc"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <tapGestureRecognizer id="Jqp-oP-4Jr">
+                    <connections>
+                        <action selector="bopItTapped:" destination="BYZ-38-t0r" id="1W4-0V-Kh8"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-79.200000000000003" y="129.98500749625188"/>
         </scene>
